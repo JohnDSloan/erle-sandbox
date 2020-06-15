@@ -11,6 +11,19 @@
 
 ### For developers
 
+create an empty directory and enter it
+```sh
+$ mkdir erle-sandbox-container && cd erle-sandbox-container
+```
+
+Create and activate a new virtual environment (for Python 3)
+```sh
+$ pip install virtualenv
+$ virtualenv venv
+$ source venv/bin/activate
+```
+
+Clone repository
 ```sh
 $ git clone https://github.com/JohnDSloan/erle-sandbox
 ```
@@ -18,14 +31,6 @@ $ git clone https://github.com/JohnDSloan/erle-sandbox
 Enter the base directory
 ```sh
 $ cd erle-sandbox
-```
-
-Create and activate a new virtual environment (for Python 3)
-
-```sh
-$ pip install virtualenv
-$ virtualenv venv
-$ source venv/bin/activate
 ```
 
 Install project dependencies:
@@ -39,7 +44,6 @@ $ django-admin startproject myerlesandbox
 ```
 
 Django will create the file structure
-
 ```sh
 ├── myerlesandbox/
     ├── manage.py
