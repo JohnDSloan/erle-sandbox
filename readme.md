@@ -52,6 +52,7 @@ Django will create the file structure
 
 From the cloned erle-sandbox, copy the directories 'base' and 'saoirse' into your 'myerlesandbox' directory. Then add an empty directory at 'media/synthesisedSpeech/':
 
+```sh
 ├── myerlesandbox/
     ├── base/..
     ├── manage.py
@@ -62,9 +63,11 @@ From the cloned erle-sandbox, copy the directories 'base' and 'saoirse' into you
         ├── urls.py
         ├── wsgi.py
     ├── saoirse/..
+```
 
 Edit 'myerlesandbox/myerlesandbox/urls.py' to look like:
 
+```sh
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
@@ -74,9 +77,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('saoirse.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```
 
 In 'myerlesandbox/myerlesandbox/settings.py', make the following changes:
 
+```sh
 1. add 'saoirse.apps.SaoirseConfig' to the 'INSTALLED_APPS' list
 2. TEMPLATES['DIRS'] = [os.path.join(BASE_DIR, 'base/templates')]
 3. the end of the file should look like:
@@ -92,16 +97,19 @@ STATIC_ROOT = 'static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+```
 
 To generate synthesised speech, register for a free acoount at <a href="https://www.cereproc.com">Cereproc</a>
 
 in 'saoirse/views/speech_synthesis/utils/text_to_speech.py', fill in your own accountID and password at the top of the page. Then delete:
 
+```sh
 try:
     accountID = settings.CEREPROC_ACC_ID
     password = settings.CEREPROC_PASSWORD
 except:
     pass
+```
 
 (all animations will still work without taking this step above)
 
