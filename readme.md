@@ -40,26 +40,26 @@ $ django-admin startproject myerlesandbox
 
 Django will create the file structure
 
-myerlesandbox/\n
-    manage.py\n
-    myerlesandbox/\n
-        __init__.py\n
-        settings.py\n
-        urls.py\n
-        wsgi.py\n
+├── myerlesandbox/
+    ├── manage.py
+    ├── myerlesandbox/
+        ├── __init__.py
+        ├── settings.py
+        ├── urls.py
+        ├── wsgi.py
 
 From the cloned erle-sandbox, copy the directories 'base' and 'saoirse' into your 'myerlesandbox' directory. Then add an empty directory at 'media/synthesisedSpeech/':
 
-myerlesandbox/
-    base/..
-    manage.py
-    media/..
-    myerlesandbox/
-        __init__.py
-        settings.py
-        urls.py
-        wsgi.py
-    saoirse/..
+├── myerlesandbox/
+    ├── base/..
+    ├── manage.py
+    ├── media/..
+    ├── myerlesandbox/
+        ├── __init__.py
+        ├── settings.py
+        ├── urls.py
+        ├── wsgi.py
+    ├── saoirse/..
 
 Edit 'myerlesandbox/myerlesandbox/urls.py' to look like:
 
