@@ -1,0 +1,47 @@
+.erle-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*box-shadow: inset 0 0 1px 1px black;*/
+}
+
+.erle-inner-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*border: 1px solid black;*/
+}
+
+.erle-row-third {
+    position: relative;
+    display: inline-block;
+    width: 33%;
+    height: 100%;
+}
+
+.erle-row-two-thirds {
+    position: relative;
+    display: inline-block;
+    width: 67%;
+    height: 100%;
+}
+
+.erle-col-quarter {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 25%;
+}
+
+.erle-col-three-quarters {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 75%;
+}
+
+.erle-center {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
