@@ -3,5 +3,5 @@ __pycache__
 private.py
 *.sw[op]
 erle_sandbox/
-media/
+base/media/
 myerlesandbox/
