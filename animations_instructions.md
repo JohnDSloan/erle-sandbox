@@ -139,5 +139,5 @@ tiaObject.bodyBones
 ```
 will show a list of all the bones that can be modified.
 
-Now you can move Saoirse, you can change her expressions too by looking at <strong>expression_instructions.md</strong>
+Now you can move Saoirse, you can change her expressions too by looking at <a href="https://github.com/JohnDSloan/erle-sandbox/blob/master/expression_instructions.md">expression instructions</a>
 
