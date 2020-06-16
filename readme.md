@@ -18,7 +18,7 @@ $ mkdir erle-sandbox-container && cd erle-sandbox-container
 
 Create and activate a new virtual environment (for Python 3)
 ```sh
-$ pip install virtualenv
+$ pip install -U virtualenv
 $ virtualenv venv
 $ source venv/bin/activate
 ```
@@ -38,6 +38,11 @@ Install project dependencies:
 $ pip install -r requirements.txt
 ```
 
+Navigate back up to the erle-sandbox-container directory:
+```sh
+$ cd ..
+```
+
 Start your own Django project:
 ```sh
 $ django-admin startproject myerlesandbox
@@ -54,7 +59,13 @@ Django will create the file structure
         ├── wsgi.py
 ```
 
-From the cloned erle-sandbox, copy the directories 'base' and 'saoirse' into your 'myerlesandbox' directory. Then add an empty directory at 'media/synthesisedSpeech/':
+From the cloned erle-sandbox, copy the directories 'media', 'base' and 'saoirse' into your 'myerlesandbox' directory:
+
+```sh
+cp -r erle-sandbox/media/ myerlesandbox/media/
+cp -r erle-sandbox/base/ myerlesandbox/base/
+cp -r erle-sandbox/saoirse/ myerlesandbox/saoirse/
+```
 
 ```sh
 ├── myerlesandbox/
@@ -86,9 +97,10 @@ urlpatterns = [
 In 'myerlesandbox/myerlesandbox/settings.py', make the following changes:
 
 ```sh
-1. add 'saoirse.apps.SaoirseConfig' to the 'INSTALLED_APPS' list
-2. TEMPLATES['DIRS'] = [os.path.join(BASE_DIR, 'base/templates')]
-3. the end of the file should look like:
+1. ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+2. add 'saoirse.apps.SaoirseConfig' to the 'INSTALLED_APPS' list
+3. TEMPLATES['DIRS'] = [os.path.join(BASE_DIR, 'base/templates')]
+4. the end of the file should look like:
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
@@ -117,7 +129,12 @@ except:
 
 (all animations will still work without taking this step above)
 
-navigate to the root myerlesandbox directory and create superuser:
+navigate to the root myerlesandbox directory and migrate models to database:
+
+```sh
+./manage.py migrate
+```
+
 ```sh
 $./manage.py createsuperuser
 ```
@@ -130,9 +147,9 @@ $./manage.py runserver
 
 go to http://127.0.0.1:8000/ in your browser
 
-to access admin, go to:
-http://127.0.0.1:8000/admin
+You are up and running!
 
+Now, read 'animation_instructions.md' to begine making your own animations with Saoirse
 
 ## Built with
 - [Django](https://www.djangoproject.com)
