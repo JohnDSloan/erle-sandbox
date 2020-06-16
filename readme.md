@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src=".base/static/base/images/logo_n.png" alt="Erle" width="160">
+  <img src="https://github.com/JohnDSloan/erle-sandbox/blob/master/base/static/base/images/logo_n.png" alt="Erle" width="160">
 </h1>
 
 <h4 align="center">The sandbox for modules of <a href="https://erle.ucd.ie" target="_blank">Erle</a></h4>
