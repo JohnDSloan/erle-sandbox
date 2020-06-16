@@ -5,11 +5,15 @@
 
 <h4 align="center">The sandbox for modules of <a href="https://erle.ucd.ie" target="_blank">Erle</a></h4>
 
-# Demo
-👉 Watch the ERLE demo <a href="https://www.https://www.youtube.com/watch?v=VeQA3oXULQw">here</a>.
+### Demo
+👉 Watch the ERLE demo <a href="https://www.youtube.com/watch?v=VeQA3oXULQw">here</a>.
 <br>
 
-### For developers
+### Play with Saoirse
+👉Make Saoirse move and talk <a href="http://erle-sandbox.ucd.ie">here</a>.
+<br>
+
+### Develop Saoirse Locally
 
 create an empty directory and enter it
 ```sh
@@ -38,7 +42,7 @@ Install project dependencies:
 $ pip install -r requirements.txt
 ```
 
-Navigate back up to the erle-sandbox-container directory:
+Navigate back up to the <strong>erle-sandbox-container</strong> directory:
 ```sh
 $ cd ..
 ```
@@ -59,7 +63,7 @@ Django will create the file structure
         ├── wsgi.py
 ```
 
-From the cloned erle-sandbox, copy the directories 'media', 'base' and 'saoirse' into your 'myerlesandbox' directory:
+From the cloned erle-sandbox, copy the directories <strong>media</strong>, <strong>base</strong> and <strong>saoirse</strong> into your <strong>myerlesandbox</strong> directory:
 
 ```sh
 cp -r erle-sandbox/media/ myerlesandbox/media/
@@ -80,7 +84,7 @@ cp -r erle-sandbox/saoirse/ myerlesandbox/saoirse/
     ├── saoirse/..
 ```
 
-Edit 'myerlesandbox/myerlesandbox/urls.py' to look like:
+Edit <strong>myerlesandbox/myerlesandbox/urls.py</strong> to look like:
 
 ```sh
 from django.contrib import admin
@@ -94,7 +98,7 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 ```
 
-In 'myerlesandbox/myerlesandbox/settings.py', make the following changes:
+In <strong>myerlesandbox/myerlesandbox/settings.py</strong>, make the following changes:
 
 ```sh
 1. ALLOWED_HOSTS = ['localhost', '127.0.0.1']
@@ -117,7 +121,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 To generate synthesised speech, register for a free acoount at <a href="https://www.cereproc.com">Cereproc</a>
 
-in 'saoirse/views/speech_synthesis/utils/text_to_speech.py', fill in your own accountID and password at the top of the page. Then delete:
+<strong>saoirse/views/speech_synthesis/utils/text_to_speech.py</strong>, fill in your own accountID and password at the top of the page. Then delete:
 
 ```sh
 try:
@@ -129,7 +133,7 @@ except:
 
 (all animations will still work without taking this step above)
 
-navigate to the root myerlesandbox directory and migrate models to database:
+navigate to the root <strong>myerlesandbox</strong> directory and migrate models to database:
 
 ```sh
 ./manage.py migrate
@@ -151,7 +155,7 @@ You are up and running!
 
 Now you can read <strong>animation_instructions.md</strong> to begin making your own animations with Saoirse
 
-## Built with
+### Built with
 - [Django](https://www.djangoproject.com)
 - [Three.js](https://threejs.org)
 
