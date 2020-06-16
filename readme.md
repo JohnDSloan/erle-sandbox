@@ -149,7 +149,7 @@ go to http://127.0.0.1:8000/ in your browser
 
 You are up and running!
 
-Now, read 'animation_instructions.md' to begine making your own animations with Saoirse
+Now you can read <strong>animation_instructions.md</strong> to begin making your own animations with Saoirse
 
 ## Built with
 - [Django](https://www.djangoproject.com)
